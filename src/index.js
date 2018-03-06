@@ -375,7 +375,28 @@ module.exports = function solveSudoku(matrix) {
 							}
 						}
 						if (result===405){return matrix;}
-				
+						
+						else if(1){		
+							matrix=[];
+							for (let s=0; s<9; s+=1){			
+								matrix[s]=[];
+								for (let p=0; p<9; p+=1){				
+									matrix[s].push(Default_massive[s][p]);
+								}
+							}
+							findInSubsquares();	findNumbers();	findInSubsquares();	findNumbers();	findInSubsquares();	findNumbers_D();	findNumbers();	findInSubsquares();	findNumbers();	findNumbers_A();	findNumbers();	findInSubsquares();	findNumbers();	findInSubsquares();	findNumbers_A(); findNumbers_D();	findNumbers();	findInSubsquares(); findNumbers_D(); findNumbers(); findNumbers_D(); findNumbers();
+							
+							result = 0;
+							for(let x=0; x<9; x+=1){			
+								for(let y=0; y<9; y+=1){
+									if(matrix[x]){
+										result+=matrix[x][y];
+									}	
+								}
+							}
+							if (result===405){return matrix;}						
+						
+						}				
 					}
 				}
 			}
